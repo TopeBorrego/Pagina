@@ -1,0 +1,150 @@
+html_content = """<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi Página Personal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      scroll-behavior: smooth;
+      background-color: #daa425;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+    header img {
+      border-radius: 50%;
+      width: 150px;
+      margin-top: 10px;
+    }
+    nav {
+      background-color: #34495e;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 30px;
+      background: white;
+      margin: 20px;
+      border-radius: 10px;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    .gallery img, .gallery video {
+      max-width: 300px;
+      margin: 10px;
+    }
+    .downloads {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .downloads button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kevin Jassel Hernández Sánchez</h1>
+    <img src="perfil.jpg" alt="Mi Foto">
+    <nav>
+      <a href="#formacion">Formación Académica</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#pasatiempos">Pasatiempos</a>
+      <a href="#criptografia">Criptografía</a>
+    </nav>
+  </header>
+
+  <section id="formacion">
+    <h2>Formación Académica</h2>
+    <ul>
+      <li>Secundaria: E.S.T.I.C. 0089 Felipe Neri Villarello </li>
+      <p>Dirección: C. Clemátides Manzana 035, Villa de las Flores, 55710 San Francisco Coacalco, Méx. </p>
+      <li>Bachillerato: Centro de Estudios Científicos y Tecnológicos N° 3 “Estanislao Ramírez Ruiz” IPN</li>
+      <p>Dirección: Manzana 027, 55118 Ecatepec de Morelos, Méx.</p>
+      <li>Universidad: ESCOM - Escuela Superior de Cómputo - IPN </li>
+      <p>Dirección: ESCOM IPN, Unidad Profesional Adolfo López Mateos, Av. Juan de Dios Bátiz, Nueva Industrial Vallejo, Gustavo A. Madero, 07320 Ciudad de México, CDMX
+    </p>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: <a href="mailto:khernandezs1902@alumno.ipn.mx">khernandezs1902@alumno.ipn.mx</a></p>
+    <p>Telefono: <a href="tel:+515551785131">55 51785131</a></p>
+  </section>
+
+  <section id="pasatiempos">
+    <h2>Pasatiempos Favoritos</h2>
+    <div>
+      <h3>Jugar Videojuegos</h3>
+      <p>Desde la cuarentea desarrole un gusto por los videojuesgos y en mis ratos libres es lo que prefiero hacer, a veces me divierto, a veces me estreso.</p>
+      <div class="gallery">
+        <img src="juegos.jpeg" alt="Jugar">
+      </div>
+
+      <h3>Entrenar gimnasio</h3>
+      <p>Ir al gym se volvio algo escencial en mi dia a dia, siempre encuentro el momento perfecto para ir. Ya sea entre clases, despues de la escuela</p>
+      <p>o en los dias que voy a estar muy ocupado entreno desde las 6 de la mañana</p>
+      <div class="gallery">
+        <img src="gym.jpeg" alt="gym">
+      </div>
+
+      <h3>Grabar Videos</h3>
+      <p>Soy algo introvertido, pero disfruto mucho ver videos mientras hago mis actividades cotidianas. Aún no es un pasatiempo, pero me gustaría empezar</p>
+      <p>a grabar videovlogs, no esta en mi plan ser alguien reconocido. Mi idea es mas como grabar video-diarios</p>
+      <div class="gallery">
+        <img src="videos.jpeg" alt="videos">
+      </div>
+    </div>
+  </section>
+
+  <section id="criptografia">
+    <h2>Datos Curiosos sobre Criptografía</h2>
+
+    <h3>1. Enigma y la Segunda Guerra Mundial</h3>
+    <p>La máquina Enigma fue usada por los nazis, pero fue descifrada gracias a Alan Turing.</p>
+    <img src="turing.jpeg" alt="turing">
+
+    <h3>2. La historia de la criptografia</h3>
+    <p>Viendo teoria en la clase, me llama mucho la atención que siempre ha existido la necesidad de ocultar información. Los metodos antiguos me parecen muy peculiares y algo divertidos .</p>
+    <img src="antiguo.jpeg" alt="antiguo">
+
+    <h3>3. Bitcoin y la Criptografía</h3>
+    <p>Las criptomonedas como Bitcoin funcionan gracias a criptografía de clave pública y funciones hash.</p>
+    <img src="bitcoin.jpeg" alt="bitcoin">
+  </section>
+
+  <section class="downloads">
+    <h2>Descargas</h2>
+    <button onclick="descargarArchivo('KevinJassel_CV.pdf')">Descargar CV</button>
+    <button onclick="descargarArchivo('llave-publica.txt')">Descargar Llave Pública</button>
+  </section>
+
+  <script>
+    function descargarArchivo(archivo) {
+      const link = document.createElement("a");
+      link.href = archivo;
+      link.download = archivo;
+      link.click();
+    }
+  </script>
+
+</body>
+</html>
